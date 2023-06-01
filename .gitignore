@@ -1,0 +1,10 @@
+venv/
+.idea/
+.*_cache/
+__pycache__
+*.db
+.coverage
+home_work_19/
+.env.py
+poetry.lock
+
