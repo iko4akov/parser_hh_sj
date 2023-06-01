@@ -1,10 +1,11 @@
 from parser_hh_superjob.JSON_saver.json_saver import JSONSaver
 from parser_hh_superjob.api_platforms.hh_api import HeadHunterAPI
 from parser_hh_superjob.api_platforms.superjob_api import SuperJobAPI
-from parser_hh_superjob.commands_handler.command_handler import CommandsHandler
+from parser_hh_superjob.command_handler import CommandsHandler
 
 
 def user_interaction():
+
     hh_api = HeadHunterAPI()
     superjob_api = SuperJobAPI()
 
