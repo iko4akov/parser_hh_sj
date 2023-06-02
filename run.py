@@ -24,9 +24,14 @@ def user_interaction():
     command_handler = CommandsHandler()
 
     top_n = command_handler.get_quantity_vacancies()
-    salary_from, salary_to = command_handler.get_salary_range()
 
-    json_saver.get_vacancies_by_salary(top_n, salary_from, salary_to)
+    key_exit_while = True
+
+    while key_exit_while:
+
+        salary_from, salary_to = command_handler.get_salary_range()
+        key_exit_while = json_saver.get_vacancies_by_salary(top_n, salary_from, salary_to)
+
 
     id_vacancy = command_handler.get_id_vacancy()
 
