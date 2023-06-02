@@ -16,7 +16,7 @@ class CommandsHandler:
     def get_salary_range():
         while True:
             try:
-                user_input = input("Введите диапазон зарплат в формате '100000 150000' :").split()
+                user_input = input("Введите диапазон зарплат в формате '1000 150000' :").split()
                 if len(user_input) == 2:
                     salary_from = int(user_input[0])
                     salary_to = int(user_input[1])
