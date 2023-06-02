@@ -40,7 +40,7 @@ class MixinWorkingData:
         return filtered_list
 
     @staticmethod
-    def compare_lists(data: list, id_vacancy: int) -> bool:
+    def compare_lists(data: list, id_vacancy: int) -> [bool, list]:
         """Получает список и удаляет из него объект с id_vacancy,
         если такой объект был, возвращает bool значение"""
 
@@ -48,5 +48,9 @@ class MixinWorkingData:
         for vacancy in data:
             if int(vacancy['ID Вакансии']) != id_vacancy:
                 new_data.append(vacancy)
+        if len(data) > len(new_data):
 
-        return len(data) > len(new_data)
+            return new_data
+
+        else:
+            print(f'Vacancy by id: {id_vacancy} Not Found')
