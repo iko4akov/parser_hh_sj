@@ -9,7 +9,7 @@ def user_interaction():
     hh_api = HeadHunterAPI()
     superjob_api = SuperJobAPI()
 
-    filter_words = input("Введите ключевые слова для фильтрации вакансий,\nпример <Python develop Москва>: ")
+    filter_words = input("Введите ключевые слова для фильтрации вакансий,\nпример <Python develop Краснодар>: ")
 
     print('please wait....')
 
@@ -30,8 +30,9 @@ def user_interaction():
 
     id_vacancy = command_handler.get_id_vacancy()
 
-    json_saver.delete_vacancy(id_vacancy)
-
+    while id_vacancy != 'stop':
+        json_saver.delete_vacancy(id_vacancy)
+        id_vacancy = command_handler.get_id_vacancy()
 
 if __name__ == "__main__":
     user_interaction()

@@ -42,13 +42,12 @@ class JSONSaver(MixinWorkingData):
     def delete_vacancy(self, id_vacancy: int):
         """Удаляет вакансии из файла по ID"""
 
-        new_data = []
         data = self.read_file
 
-        if self.compare_lists(data, id_vacancy):
+        new_data = self.compare_lists(data, id_vacancy)
 
+        if new_data:
             with open(Config.file_name, mode='w', encoding='utf-8') as file:
-                file.write(json.dumps(new_data))
+                file.write(json.dumps(new_data, ensure_ascii=False))
                 print(f'vacancy by id: {id_vacancy} successful deleted')
-        else:
-            print(f'Vacancy by id: {id_vacancy} Not Found')
+
