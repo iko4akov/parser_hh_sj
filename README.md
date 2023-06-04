@@ -69,3 +69,7 @@
 
     - `ModelHeadHunter`, `ModelSuperJob`: конкретные подклассы `PlatformModel`, представляющие объекты вакансии на платформе HeadHunter и SuperJob.
 
+## Тестирование
+  
+  - Запуск тестов `pytest`
+  - Просмотр покрытия тестами `pytest --cov`
