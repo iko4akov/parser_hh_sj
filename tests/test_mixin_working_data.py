@@ -35,7 +35,9 @@ def list_with_object() -> list:
         'link': 'url1',
         'firm_name': 'employer3',
         'experience': {'title': 'experience'}
-    })
+    }
+    )
+
     return [hh_model1, hh_model2, sj_model]
 
 
