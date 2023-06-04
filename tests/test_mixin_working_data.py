@@ -38,6 +38,7 @@ def list_with_object() -> list:
     })
     return [hh_model1, hh_model2, sj_model]
 
+
 class TestMixinWorkingData:
 
     def test_sotring_list(self, list_with_object):
@@ -60,6 +61,14 @@ class TestMixinWorkingData:
 
         assert mx.show_filtered_vacancy(test_list) == print("Нет вакансий, соответствующих заданным критериям.")
 
-    def test_get_filtered_list(self, list_with_object):
-        pass
+    def test_get_filtered_list(self):
+        filter_list = [
+            {'ЗП от': 1500},
+            {'ЗП от': 1000},
+            {'ЗП от': 2000},
+        ]
+
+        filtred_list = mx.get_filtered_list(3, 1000, 2000, filter_list)
+
+        assert filtred_list[0]['ЗП от'] == 1500
 
