@@ -9,6 +9,7 @@ packages = [{include = "parser_hh_superjob"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 requests = "^2.31.0"
+pytest = "^7.3.1"
 
 
 [build-system]
