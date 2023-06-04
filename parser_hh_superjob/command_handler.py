@@ -31,7 +31,8 @@ class CommandsHandler:
             except InvalidLen as e:
                 print(e.message)
 
-    def get_id_vacancy(self):
+    @staticmethod
+    def get_id_vacancy():
         while True:
             try:
                 id_vacancy = int(input("Введите ID вакансии для удаления ее из файла: "))
