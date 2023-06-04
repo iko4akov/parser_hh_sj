@@ -62,6 +62,7 @@ class TestMixinWorkingData:
         assert mx.show_filtered_vacancy(test_list) == print("Нет вакансий, соответствующих заданным критериям.")
 
     def test_get_filtered_list(self):
+        """TestCase4"""
         filter_list = [
             {'ЗП от': 1500},
             {'ЗП от': 1000},
